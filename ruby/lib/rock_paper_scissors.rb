@@ -18,6 +18,7 @@ class Game
     else
       @player2
     end
+
   end
 
   private

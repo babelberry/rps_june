@@ -25,11 +25,17 @@
       var p2 = new Player('Mihai');
       var game = new Game(p1, p2);
 
+
+
+        console.log('Hello')
+
       $('.choices img').on('click', function(){
         p1.picks($(this).data('pick'));
         p2.picks('rock');
+        $('.choices img').hide();
+        console.log(this);
+        $(this).show().animate({ padding: '0 38%'});
 
-        console.log('Hello')
         // $('#results').prepend('<li>' + game.winningMessage() + '</li>');
         $("<li>" + game.winningMessage() + "</li>").prependTo('#results').slideDown();
 
